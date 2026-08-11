@@ -1,5 +1,7 @@
 #include "pxt.h"
 
+namespace hopper_irq {  // ← 名前空間を追加
+
 static volatile int medalCount = 0;
 
 // 割り込みハンドラ（P0立ち上がり）
@@ -18,3 +20,5 @@ int medalCountNative() {
 void initNative() {
     uBit.messageBus.listen(MICROBIT_ID_IO_P0, MICROBIT_PIN_EVT_RISE, onP0Rise);
 }
+
+}  // ← namespace の閉じカッコを忘れずに
