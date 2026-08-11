@@ -1,6 +1,6 @@
 #include "pxt.h"
 
-namespace hopper_irq {  // ← 名前空間を追加
+namespace ext_irq {
 
 static volatile int medalCount = 0;
 
@@ -9,16 +9,14 @@ void onP0Rise(MicroBitEvent e) {
     medalCount++;
 }
 
-// TypeScript から呼び出す関数
-//%
+//% block="get medal count native"
 int medalCountNative() {
     return medalCount;
 }
 
-// 初期化関数
-//%
+//% block="init irq native"
 void initNative() {
     uBit.messageBus.listen(MICROBIT_ID_IO_P0, MICROBIT_PIN_EVT_RISE, onP0Rise);
 }
 
-}  // ← namespace の閉じカッコを忘れずに
+}
