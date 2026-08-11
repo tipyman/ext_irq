@@ -1,9 +1,9 @@
 namespace ext_irq {
     //% block="get medal count"
     //% shim=ext_irq::medalCountNative
-    export function getMedalCount(): number;
+    export function getMedalCount(): number
 
     //% block="init irq"
     //% shim=ext_irq::initNative
-    export function init(): void;
+    export function init(): void
 }
