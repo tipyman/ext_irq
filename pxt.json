@@ -1,6 +1,6 @@
 {
     "name": "ext_irq",
-    "description": "Hardware interrupt extension",
+    "description": "Hardware interrupt extension for micro:bit",
     "files": [
         "main.ts",
         "myext.cpp"
