@@ -1,5 +1,5 @@
 {
-    "name": "hopper_irq",
+    "name": "ext_irq",
     "description": "Hardware interrupt extension",
     "files": [
         "main.ts",
