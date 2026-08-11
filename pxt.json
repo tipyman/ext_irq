@@ -1,11 +1,11 @@
 {
     "name": "ext_irq",
     "description": "Hardware interrupt extension for micro:bit",
+    "dependencies": {
+        "core": "*"
+    },
     "files": [
         "main.ts",
         "myext.cpp"
-    ],
-    "dependencies": {
-        "core": "*"
-    }
+    ]
 }
