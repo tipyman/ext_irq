@@ -12,6 +12,8 @@ int medalCountNative() {
 
 //% block="init irq native"
 void initNative() {
+    uBit.io.P0.getDigitalValue();
+    // 立ち上がりイベントを監視
     uBit.messageBus.listen(MICROBIT_ID_IO_P0, MICROBIT_PIN_EVT_RISE, onP0Rise);
 }
 }
