@@ -1,0 +1,11 @@
+{
+    "name": "hopper_irq",
+    "description": "Hardware interrupt extension",
+    "files": [
+        "main.ts",
+        "myext.cpp"
+    ],
+    "dependencies": {
+        "core": "*"
+    }
+}
