@@ -1,24 +1,9 @@
-#include "pxt.h"
-
-namespace hopper_irq {  // ← 名前空間を追加
-
-static volatile int medalCount = 0;
-
-// 割り込みハンドラ（P0立ち上がり）
-void onP0Rise(MicroBitEvent e) {
-    medalCount++;
+//% block="get medal count"
+export function getMedalCount(): number {
+    return medalCountNative();
 }
 
-// TypeScript から呼び出す関数
-//%
-int medalCountNative() {
-    return medalCount;
+//% block="init irq"
+export function init() {
+    initNative();
 }
-
-// 初期化関数
-//%
-void initNative() {
-    uBit.messageBus.listen(MICROBIT_ID_IO_P0, MICROBIT_PIN_EVT_RISE, onP0Rise);
-}
-
-}  // ← namespace の閉じカッコを忘れずに
